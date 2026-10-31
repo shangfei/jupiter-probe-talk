@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>利用木星系作为研究 原始太阳星云的探针</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="刘尚飞 liushangfei@mail.sysu.edu.cn" />
+    <meta name="date" content="2026-10-30" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/ninjutsu.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-progressBar/progress-bar.js"></script>
+    <link href="libs/xaringanExtra-banner/banner.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-banner/banner.js"></script>
+    <link rel="stylesheet" href="css/exoplanet_2026.css" type="text/css" />
+    <link rel="stylesheet" href="css/jupiter_v2.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide, no-banner, title-slide
+
+.title[
+# 利用木星系作为研究&lt;br&gt;原始太阳星云的探针
+]
+.subtitle[
+## 从巨行星的内部结构到卫星系统的诞生
+]
+.author[
+### 刘尚飞&lt;br&gt;liushangfei@mail.sysu.edu.cn
+]
+.institute[
+### 中山大学物理与天文学院
+]
+.date[
+### 2026-10-30
+]
+
+---
+class: inverse, outline
+
+
+
+
+
+
+
+
+&lt;style type="text/css"&gt;
+.gray { color: #999; }
+.big { font-size: 200%; }
+.large { font-size: 125%; }
+.medium { font-size: 110%; }
+.smaller { font-size: 70%; }
+.red { color: #ff5a5a; }
+.green { color: #3c3; }
+&lt;/style&gt;
+
+
+## 报告提纲
+
+.smaller[.hl[项目定位]：服务国家重点研发计划「木星空间环境的科学研究及探测原理」（汪毓明教授牵头）——以形成理论约束**木卫四内部结构**，对接**天问四号**]
+
+1. 背景：木星系为何是太阳星云的“化石”
+2. 早期大撞击（giant impact）与稀释核（dilute core）
+3. 撞击时标与环行星盘（circumplanetary disk）的初始条件
+4. 环行星盘模型与 JWST 观测约束
+5. 木卫四（Callisto）：晚期吸积环境的探针
+6. 天问四号（Tianwen-4）：可检验预言与项目目标
+
+---
+class: inverse
+
+## 木星系：太阳星云晚期的“化石记录”
+
+.readable.short[
+- **朱诺号**（Juno）重力场：木星内部存在**稀释核**（dilute core），重元素向外延展至约半个半径
+]
+
+--
+
+.readable.short[
+- **伽利略卫星**（Galilean satellites）：密度由内向外递减——冰–岩梯度
+]
+
+--
+
+.readable.short[
+- **木卫四**（Callisto）：转动惯量偏大，仅部分分异（differentiation），几乎无地质活动
+]
+
+--
+
+.center[.large[.hl[共同指向]：原行星盘（protoplanetary disk, PPD）向环行星盘（circumplanetary disk, CPD）过渡时的物质分配与动力学过程]]
+
+.footnote[Wahl et al. (2017, GRL)；Anderson et al. (2001, Icarus)；Canup &amp;amp; Ward (2002, AJ)]
+
+???
+开场一句：木星系既有行星本体的内部信息，又有卫星系统的成分梯度，二者都在太阳星云晚期定形。
+三条观测证据各对应一个物理过程：核的形成与改造、CPD 中固体的温度分布、最外侧卫星的低热吸积。
+
+---
+class: inverse, sat
+
+## 伽利略卫星：冰–岩梯度
+
+&lt;table class="cmp c3"&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;卫星&lt;/th&gt;&lt;th&gt;轨道半径 (R&lt;sub&gt;J&lt;/sub&gt;)&lt;/th&gt;&lt;th&gt;平均密度 (g cm&lt;sup&gt;−3&lt;/sup&gt;)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;木卫一 Io&lt;/td&gt;&lt;td&gt;5.9&lt;/td&gt;&lt;td&gt;3.53&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;木卫二 Europa&lt;/td&gt;&lt;td&gt;9.4&lt;/td&gt;&lt;td&gt;3.01&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;木卫三 Ganymede&lt;/td&gt;&lt;td&gt;15.0&lt;/td&gt;&lt;td&gt;1.94&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;木卫四 Callisto&lt;/td&gt;&lt;td&gt;26.3&lt;/td&gt;&lt;td&gt;1.83&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+.readable[
+- 密度向外递减 `\(\Rightarrow\)` 冰质量分数向外升高
+- 指向 CPD 中存在**温度梯度**与**雪线**（snow line）
+- 木卫四转动惯量因子（moment of inertia factor） `\(C/MR^2\approx 0.355\)`：未完全分异
+]
+
+.footnote[Schubert et al. (2004, in *Jupiter*, CUP)；Anderson et al. (2001, Icarus)]
+
+???
+木卫三 C/MR² ≈ 0.31，已强烈分异；木卫四 ≈ 0.355，说明吸积时加热很弱、冰岩没有完全分离。
+这一对比是后面“木卫四作为探针”的伏笔。
+
+---
+class: inverse, middle
+
+# 核心问题
+
+.large[
+- 木星的**稀释核**如何形成？
+- 它与**环行星盘**的诞生有何关联？
+- 能否用**卫星的性质**反推当时的 CPD 条件？
+]
+
+&lt;br&gt;
+
+.large[.hl[思路]：把木星内部、CPD 与卫星放进同一条形成时间线]
+
+.readable.short[
+形成端理论 `\(\Rightarrow\)` 木卫四分异 / 冰–岩比 / 地下海洋的可检验预言，支撑国家重点研发项目对**木卫四内部结构**的认识，服务**天问四号**
+]
+
+???
+三个问题对应报告的三个部分。强调“同一条时间线”：撞击的时刻决定 CPD 的初始条件，CPD 又决定卫星的吸积环境。
+口头点明：本研究在国家重点研发项目中的角色是形成端的初始条件与内部结构预言，与空间环境、探测原理方向互补。
+
+---
+class: inverse, middle, section-slide
+background-image: url(images/bg_nagoya_section.jpg)
+background-size: cover
+
+# .num[一、]早期大撞击与稀释核
+
+---
+class: inverse, withfig
+background-image: url(images/wahl2017_density_profiles.png), url(images/bg_nagoya_dark.jpg)
+background-size: auto 60%, cover
+background-position: right 3% top 130px, center
+
+## 朱诺号揭示的稀释核
+
+- 重力矩（gravitational moments） `\(J_{2n}\)` 要求核区**密度梯度平缓**
+- 重元素延展至 `\(\sim 0.3\text{–}0.5\,R_{\mathrm{J}}\)`
+- 经典核吸积模型（core accretion）预言**致密核**
+- 稀释核需要**额外的混合机制**
+
+.footnote[图改编自 Wahl et al. (2017, GRL) 图 1；Militzer et al. (2022, PSJ)]
+
+???
+要点：朱诺号测得的偶次重力矩与致密小核模型不符。
+对流侵蚀核的效率在木星条件下不足以在 4.5 Gyr 内形成如此延展的结构，因此需要早期的、能量很大的事件。
+
+---
+class: inverse
+background-image: url(images/liu2019_headon_impact_snapshots.png), url(images/bg_nagoya_dark.jpg)
+background-size: 72% auto, cover
+background-position: center top 130px, center
+
+## 早期大撞击模型
+
+.figtop.two[
+&lt;div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;\(\sim 10\,M_{\oplus}\)&lt;/code&gt; 胚胎&lt;b&gt;正面撞击&lt;/b&gt;年轻木星&lt;/li&gt;
+&lt;li&gt;撞击破坏原始致密核，重元素与包层混合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;ul&gt;
+&lt;li&gt;稀释结构可&lt;b&gt;维持数十亿年&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;正面撞击在引力聚焦（gravitational focusing）下概率较高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+]
+
+.footnote[图改编自 Liu, S.-F., Hori, Y., Müller, S., et al. (2019, Nature, 572, 355) 图 1]
+
+???
+撞击能量足以把核物质搅入包层，之后形成的成分梯度抑制对流，使稀释结构长期稳定。
+年轻木星半径大、引力聚焦强，近正面撞击并非小概率事件。
+
+---
+class: inverse, middle, section-slide
+background-image: url(images/bg_nagoya_section.jpg)
+background-size: cover
+
+# .num[二、]撞击时标与环行星盘的初始条件
+
+---
+class: inverse, withfig
+background-image: url(images/liu2019_nbody_embryo_outcomes.png), url(images/bg_nagoya_dark.jpg)
+background-size: auto 60%, cover
+background-position: right 8% top 130px, center
+
+## N 体模拟（N-body simulation）：撞击何时发生？
+
+撞击时间取决于：
+- 行星胚胎（planetary embryo）质量
+- 初始轨道参数
+- 木星质量增长速率
+
+`\(\Rightarrow\)` 存在一定的**时间窗口**
+
+.hl[共同点]：撞击时木星已完成**失控气体吸积**（runaway gas accretion）
+
+.footnote[图改编自 Liu et al. (2019, Nature) 扩展数据图 1b 节选（k、t&lt;sub&gt;grow&lt;/sub&gt; 两组；Merge = 撞击木星）；&lt;br&gt;撞击时刻分布：刘尚飞等（待补充引用）]
+
+???
+木星质量快速增长时，Hill 半径扩大、共振位置移动，附近胚胎被激发到穿越轨道。
+不同参数组合使撞击时刻前后移动，但都落在失控吸积结束之后。这是连接内部结构与卫星系统的关键。
+
+---
+class: inverse
+background-image: url(images/schematic_formation_timeline.png), url(images/bg_nagoya_dark.jpg)
+background-size: 82% auto, cover
+background-position: center top 128px, center
+
+## 撞击设定环行星盘的初始条件
+
+.figtop.below-schematic[
+- 撞击时 CPD **已经存在**
+- **能量注入**：抬高 CPD 初始温度
+- **物质再分配**：改变 CPD 的固体丰度与成分
+]
+
+.footnote[示意图为本报告绘制；CPD 形成：Canup &amp;amp; Ward (2002, AJ)；Szulágyi et al. (2016, MNRAS)]
+
+???
+撞击不只是改造木星内部；释放的能量与抛射物会进入周围的 CPD。
+因此撞击时标 ⇒ CPD 初始热状态与固体丰度 ⇒ 卫星吸积环境。
+
+---
+class: inverse, middle
+
+# 小结（一）
+
+.large[
+- 稀释核 `\(\Leftarrow\)` 早期大撞击
+- 撞击发生在失控气体吸积**之后**，存在时间窗口
+- 撞击为环行星盘设定**初始热状态**与**物质成分**
+]
+
+&lt;br&gt;
+
+.large[.red[**下一步**：CPD 的结构能否被观测约束？]]
+
+???
+用一句话过渡到 CPD 模型与 JWST。
+
+---
+class: inverse, middle, section-slide
+background-image: url(images/bg_nagoya_section.jpg)
+background-size: cover
+
+# .num[三、]环行星盘模型与 JWST 观测约束
+
+---
+class: inverse, withfig
+background-image: url(images/sun2024_cpd_density_temperature.png), url(images/bg_nagoya_dark.jpg)
+background-size: auto 60%, cover
+background-position: right 3% top 130px, center
+
+## CPD 参数化模型 + 辐射转移
+
+- 参数：盘质量、径向结构、尘埃演化、加热源
+- 辐射转移（radiative transfer）计算 `\(\Rightarrow\)` 合成光谱能量分布（spectral energy distribution, SED）
+- 系统构建**不同演化阶段**的 CPD 结构
+
+.footnote[图改编自 Sun, Huang, Dong &amp;amp; Liu (2024, ApJ, 972, 25) 图 1（节选 Full / Evolved disk：尘埃密度与温度）]
+
+???
+参数化的好处：可以把撞击给出的初始条件、以及观测拟合给出的约束放进同一组参数。
+加热源包括行星本身的光度、黏滞耗散以及外部星光。
+
+---
+class: inverse, withfig
+background-image: url(images/sun2026_cpd_sed_fitting.png), url(images/bg_nagoya_dark.jpg)
+background-size: auto 60%, cover
+background-position: right 3% top 130px, center
+
+## JWST：年轻巨行星周围的环行星盘
+
+- 对象：年轻系外巨行星与**行星质量天体**（planetary-mass objects）
+- 光谱拟合约束：
+  - 盘质量
+  - 径向结构
+  - 尘埃演化阶段
+  - 热条件
+
+.footnote[图改编自 Sun, Marleau &amp;amp; Liu (2026, A&amp;amp;A) 图 6；JWST CPD 观测示例：Luhman et al. (2023, ApJL)]
+
+???
+这些系统处在木星系形成时相近的阶段，是“正在进行的木星系”。
+拟合给出的温度与尘埃状态，可直接作为木星 CPD 卫星吸积环境的参照。
+
+---
+class: inverse, middle, section-slide
+background-image: url(images/bg_nagoya_section.jpg)
+background-size: cover
+
+# .num[四、]木卫四：晚期吸积环境的探针
+
+---
+class: inverse, withfig
+background-image: url(images/nasa_pia01082_ganymede_callisto_interiors.png), url(images/bg_nagoya_dark.jpg)
+background-size: 53% auto, cover
+background-position: right 3% top 165px, center
+
+## 为什么是木卫四？
+
+- 位于最外侧，**热演化最弱**
+- 仅部分分异，保留吸积时的信息
+- 吸积需足够慢、温度足够低
+- 项目明确目标之一：深入认识**木卫四内部结构**（服务天问四号）
+
+`\(\Rightarrow\)` 对 CPD **晚期**吸积条件最敏感；形成理论可给出与探测直接对接的结构预言
+
+.footnote[Anderson et al. (2001, Icarus)；Canup &amp;amp; Ward (2002, AJ)；Barr &amp;amp; Canup (2008, Icarus)；图：NASA/JPL PIA01082；项目：国家重点研发计划「木星空间环境的科学研究及探测原理」]
+
+???
+如果吸积太快或 CPD 太热，木卫四会被加热到完全分异，与 C/MR² ≈ 0.355 矛盾。
+因此木卫四的部分分异本身就是对 CPD 晚期温度与吸积时标的约束。
+点题：项目要把木卫四内部结构摸清；我们从形成端给出分异程度、冰–岩比、海洋存在与否的先验，供重力/潮汐反演对照。
+
+---
+class: inverse
+
+## 不同撞击时标 `\(\Rightarrow\)` 可区分的预言
+
+&lt;table class="cmp c3 big"&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th&gt;撞击较早&lt;/th&gt;&lt;th&gt;撞击较晚&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;CPD 初始热状态&lt;/td&gt;&lt;td&gt;冷却时间较长&lt;/td&gt;&lt;td&gt;卫星吸积时仍偏热&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;固体丰度&lt;/td&gt;&lt;td class="tbd"&gt;待模型给出&lt;/td&gt;&lt;td class="tbd"&gt;待模型给出&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;木卫四分异程度&lt;/td&gt;&lt;td&gt;较弱&lt;/td&gt;&lt;td&gt;较强&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;冰–岩比&lt;/td&gt;&lt;td&gt;较高&lt;/td&gt;&lt;td&gt;较低&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;地下海洋&lt;/td&gt;&lt;td&gt;更易保留 / 层更厚（示意）&lt;/td&gt;&lt;td&gt;更易变薄或消失（示意）&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+.readable.short[
+天问四号可测：重力场（`\(C/MR^2\)`、密度分层）与潮汐响应（Love 数 `\(k_2\)` 等）——与上表预言直接对照
+]
+
+.footnote[表中趋势为示意，需以模型计算结果替换；潮汐/重力反演见任务科学目标]
+
+???
+注意：此表的具体方向需要用自己的模型结果核对后再填，示意用于口头讲解“为什么可区分”。
+核心逻辑：撞击时标 → CPD 热状态与固体丰度 → 木卫四的三项可观测量。
+对接天问四号：重力场约束整体分异与冰岩分层；潮汐 Love 数对液体层（地下海洋）敏感——形成模型给出先验区间，降低反演简并。
+
+---
+class: inverse, withfig
+background-image: url(images/mission_timeline_jupiter_system.png), url(images/bg_nagoya_dark.jpg)
+background-size: auto 60%, cover
+background-position: right 3% top 130px, center
+
+## 天问四号：直接检验
+
+- **天问四号**：木星系探测，木卫四为重点目标之一；服务国家重点研发计划（汪毓明教授牵头）
+- 协同：**JUICE**、**Europa Clipper**
+- 可测量（与形成预言对应）：
+  - **重力场** `\(\Rightarrow\)` 转动惯量、密度分层与分异程度
+  - **潮汐**（Love 数 `\(k_2\)`）`\(\Rightarrow\)` 内部流变与液体层
+  - 磁感应 / 表面成分 `\(\Rightarrow\)` 地下海洋、冰–岩比
+
+.footnote[ESA Juice；NASA (2024-10-14)；国家航天局 (2024-06-28)；项目：「木星空间环境的科学研究及探测原理」]
+
+???
+把理论预言转换成具体可测量量：重力 → C/MR² 与分层；潮汐 k₂ → 液体层/流变；磁感应 → 导电海洋；光谱 → 冰岩。
+强调：不同撞击时标给出不同的分异—海洋先验，帮助解释天问四号的重力场与潮汐测量、降低反演简并。
+
+---
+class: inverse
+
+# 总结与展望
+
+.medium-text[
+- 木星系记录了 **PPD → CPD 过渡**时的物质分配与动力学
+- 早期大撞击解释**稀释核**，撞击时木星已完成失控气体吸积
+- 撞击为 CPD 设定**初始热状态与成分**
+- CPD 模型 + JWST 光谱：约束盘质量、结构、尘埃与热条件
+- **木卫四**：检验 CPD 晚期吸积条件的关键对象
+- **天问四号**等任务：把形成预言转化为可检验的重力场 / 潮汐测量
+]
+
+.footer[✉ liushangfei@mail.sysu.edu.cn]
+
+???
+收尾：内部结构、环行星盘、卫星三者在同一时间线上相互约束；探测器数据将把理论预言变为检验。
+下一页专门点明对国家重点研发项目的形成端贡献。
+
+---
+class: inverse
+
+## 对国家重点研发项目的贡献
+
+.readable[
+- 项目：「木星空间环境的科学研究及探测原理」（汪毓明教授牵头）
+- **明确目标之一**：深入认识**木卫四内部结构**，服务**天问四号**
+- **本研究的位置**：提供形成端的**理论框架**与 **CPD / 吸积初始条件约束**
+  - 撞击时标 `\(\Rightarrow\)` 木卫四分异程度、冰–岩比、地下海洋预言
+  - 与天问四号**重力场、潮汐**测量对接，降低内部结构反演简并
+- **互补性**：与项目中已有的**空间环境**、**探测原理 / 技术**方向并行——形成理论给出“测什么、怎么解”
+]
+
+.footnote[项目目标表述据任务与课题定位整理；具体技术指标以正式任务文件为准]
+
+.footer[✉ liushangfei@mail.sysu.edu.cn]
+
+???
+一分钟讲清角色：我们不做探测载荷本身，而是给出木卫四应长成什么样的形成端先验；空间环境与探测技术方向负责测得准、解得开——三者互补。
+
+---
+class: inverse
+
+## 参考文献
+
+&lt;div class="reflines full"&gt;
+&lt;p&gt;&lt;b&gt;木星内部与大撞击：&lt;/b&gt;Wahl et al. 2017, GRL · Militzer et al. 2022, PSJ · Liu, S.-F., Hori, Y., Müller, S., et al. 2019, Nature, 572, 355 · 刘尚飞等（待补充引用）&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;伽利略卫星与木卫四：&lt;/b&gt;Anderson et al. 2001, Icarus · Schubert et al. 2004, in &lt;i&gt;Jupiter&lt;/i&gt;, CUP · Barr &amp;amp; Canup 2008, Icarus&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;环行星盘：&lt;/b&gt;Canup &amp;amp; Ward 2002, AJ · Szulágyi et al. 2016, MNRAS · Sun, Huang, Dong &amp;amp; Liu 2024, ApJ, 972, 25 · Sun, Marleau &amp;amp; Liu 2026, A&amp;amp;A · Luhman et al. 2023, ApJL&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;探测任务：&lt;/b&gt;ESA Juice 任务页 · NASA 新闻稿 (2024-10-14) · 国家航天局 (2024-06-28)&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;项目：&lt;/b&gt;国家重点研发计划「木星空间环境的科学研究及探测原理」（汪毓明教授牵头）&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;图片：&lt;/b&gt;NASA/JPL PIA01082 · 首页及各页背景：Illustration: Nagoya University&lt;/p&gt;
+&lt;/div&gt;
+
+.footer[✉ liushangfei@mail.sysu.edu.cn]
+
+---
+class: inverse, center, middle
+background-image: url(images/bg_nagoya_section.jpg)
+background-size: cover
+
+# .big[谢谢！]
+
+.footer[✉ liushangfei@mail.sysu.edu.cn]
+</textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+  "ratio": "16:9",
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
