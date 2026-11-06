@@ -4,7 +4,7 @@
     <title>利用木星系作为研究 原始太阳星云的探针</title>
     <meta charset="utf-8" />
     <meta name="author" content="刘尚飞 liushangfei@mail.sysu.edu.cn" />
-    <meta name="date" content="2026-10-30" />
+    <meta name="date" content="2026-11-06" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/ninjutsu.css" rel="stylesheet" />
@@ -23,30 +23,50 @@
 class: center, middle, inverse, title-slide, no-banner, title-slide
 
 .title[
-# 利用木星系作为研究&lt;br&gt;原始太阳星云的探针
+# 利用木星系作为研究<br>原始太阳星云的探针
 ]
 .subtitle[
 ## 从巨行星的内部结构到卫星系统的诞生
 ]
 .author[
-### 刘尚飞&lt;br&gt;liushangfei@mail.sysu.edu.cn
+### 刘尚飞<br><a href="mailto:liushangfei@mail.sysu.edu.cn" class="email">liushangfei@mail.sysu.edu.cn</a>
 ]
 .institute[
 ### 中山大学物理与天文学院
 ]
 .date[
-### 2026-10-30
+### 2026-11-06
 ]
 
 ---
+
 class: inverse, outline
 
 
 
+<style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: #0051BA;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
 
-
-
-
+<script>document.addEventListener('DOMContentLoaded',function(){new xeBanner(JSON.parse('{"left":"利用木星系作为研究原始太阳星云的探针","exclude":["no-banner"],"position":"top"}'))})</script>
+<script>document.addEventListener('DOMContentLoaded',function(){new xeBanner(JSON.parse('{"left":"刘尚飞 @ 中山大学","exclude":["no-banner"],"position":"bottom"}'))})</script>
 
 &lt;style type="text/css"&gt;
 .gray { color: #999; }
@@ -57,7 +77,6 @@ class: inverse, outline
 .red { color: #ff5a5a; }
 .green { color: #3c3; }
 &lt;/style&gt;
-
 
 ## 报告提纲
 
@@ -233,7 +252,49 @@ background-position: right 8% top 130px, center
 
 ???
 木星质量快速增长时，Hill 半径扩大、共振位置移动，附近胚胎被激发到穿越轨道。
-不同参数组合使撞击时刻前后移动，但都落在失控吸积结束之后。这是连接内部结构与卫星系统的关键。
+不同参数组合使撞击时刻前后移动，但都落在失控吸积结束之后。下一页用碰撞时间直方图展示这一窗口的宽度——弥散很大。
+
+---
+class: inverse, withfig
+background-image: url(images/nbody_jup_kscan_i0f1.png), url(images/bg_nagoya_dark.jpg)
+background-size: auto 58%, cover
+background-position: right 2% top 118px, center
+
+## 撞击时刻分布：共面模型的大弥散
+
+- 碰撞时间跨越约 `\(10^{3}\)`–`\(10^{6}\)` yr
+- 峰位随生长参数 `\(k\)` 系统性移动
+- 分布**宽度大**，并非集中于单一时标
+
+.hl[含义]：CPD 初始热状态与成分窗口本身具有显著不确定性
+
+.footnote[木星受胚胎撞击的碰撞时间直方图（共面，`\(f=1\)`，`\(k=4\)`–`\(12\)`）；刘尚飞等（待补充引用）。各参数约千次随机实现。]
+
+???
+共面扫描中，碰撞时刻从约 \(10^{3}\) 延展到 \(10^{6}\) 年量级；\(k\) 增大时峰位整体后移。
+图中 \(N_{\mathrm{total}}\) 是碰撞事件数，与蒙特卡洛随机实现次数不同；实现规模约 \(10^{3}\)。
+对 CPD：撞击注入能量与固体的时刻并不唯一，初始条件应作为分布来理解。
+
+---
+class: inverse, withfig
+background-image: url(images/nbody_jup_inc_k7f1.png), url(images/bg_nagoya_dark.jpg)
+background-size: auto 58%, cover
+background-position: right 2% top 118px, center
+
+## 倾角扫描：碰撞更稀、分布更宽
+
+- 倾角增大 → 碰撞次数显著下降
+- 尖峰变平缓，并向更晚时刻延伸
+- 非共面情形下，**弥散进一步放大**
+
+.hl[对 CPD]：能量与固体能否、何时注入，强烈依赖初始轨道倾角
+
+.footnote[木星 `\(k=7\)`、`\(f=1\)` 倾角扫描的碰撞时间直方图；刘尚飞等（待补充引用）。各倾角约千次随机实现。]
+
+???
+共面时分布相对尖锐；稍有倾角，碰撞变少、分布展宽并拖向 \(10^{6}\) yr。
+口头可提：土星模型及 \(f=2\) 扫描给出同类结论，峰值与宽度随参数变化，但大弥散是共性。
+这对环行星盘初始条件很关键——不能只取一个“典型撞击时刻”。
 
 ---
 class: inverse
@@ -262,7 +323,7 @@ class: inverse, middle
 
 .large[
 - 稀释核 `\(\Leftarrow\)` 早期大撞击
-- 撞击发生在失控气体吸积**之后**，存在时间窗口
+- 撞击发生在失控气体吸积**之后**；碰撞时间呈**大弥散**（约 `\(10^{3}\)`–`\(10^{6}\)` yr）
 - 撞击为环行星盘设定**初始热状态**与**物质成分**
 ]
 
@@ -460,7 +521,7 @@ background-size: cover
 # .big[谢谢！]
 
 .footer[✉ liushangfei@mail.sysu.edu.cn]
-</textarea>
+    </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
