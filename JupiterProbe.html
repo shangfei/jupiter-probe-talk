@@ -4,7 +4,7 @@
     <title>利用木星系作为研究 原始太阳星云的探针</title>
     <meta charset="utf-8" />
     <meta name="author" content="刘尚飞 liushangfei@mail.sysu.edu.cn" />
-    <meta name="date" content="2026-11-06" />
+    <meta name="date" content="2026-11-07" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/ninjutsu.css" rel="stylesheet" />
@@ -35,7 +35,7 @@ class: center, middle, inverse, title-slide, no-banner, title-slide
 ### 中山大学物理与天文学院
 ]
 .date[
-### 2026-11-06
+### 2026-11-07
 ]
 
 ---
@@ -80,14 +80,12 @@ class: inverse, outline
 
 ## 报告提纲
 
-.smaller[.hl[项目定位]：服务国家重点研发计划「木星空间环境的科学研究及探测原理」（汪毓明教授牵头）——以形成理论约束**木卫四内部结构**，对接**天问四号**]
-
 1. 背景：木星系为何是太阳星云的“化石”
 2. 早期大撞击（giant impact）与稀释核（dilute core）
 3. 撞击时标与环行星盘（circumplanetary disk）的初始条件
 4. 环行星盘模型与 JWST 观测约束
 5. 木卫四（Callisto）：晚期吸积环境的探针
-6. 天问四号（Tianwen-4）：可检验预言与项目目标
+6. 天问四号：科学目标与可测约束
 
 ---
 class: inverse
@@ -112,9 +110,9 @@ class: inverse
 
 --
 
-.center[.large[.hl[共同指向]：原行星盘（protoplanetary disk, PPD）向环行星盘（circumplanetary disk, CPD）过渡时的物质分配与动力学过程]]
+.center[.large[三者共同反映：原行星盘（protoplanetary disk, PPD）向环行星盘（circumplanetary disk, CPD）过渡时的物质分配与动力学]]
 
-.footnote[Wahl et al. (2017, GRL)；Anderson et al. (2001, Icarus)；Canup &amp;amp; Ward (2002, AJ)]
+.footnote[Wahl et al. 2017, GRL；Anderson et al. 2001, Icarus；Canup &amp;amp; Ward 2002, AJ]
 
 ???
 开场一句：木星系既有行星本体的内部信息，又有卫星系统的成分梯度，二者都在太阳星云晚期定形。
@@ -140,11 +138,33 @@ class: inverse, sat
 - 木卫四转动惯量因子（moment of inertia factor） `\(C/MR^2\approx 0.355\)`：未完全分异
 ]
 
-.footnote[Schubert et al. (2004, in *Jupiter*, CUP)；Anderson et al. (2001, Icarus)]
+.footnote[Schubert et al. 2004, in *Jupiter*, CUP；Anderson et al. 2001, Icarus]
 
 ???
 木卫三 C/MR² ≈ 0.31，已强烈分异；木卫四 ≈ 0.355，说明吸积时加热很弱、冰岩没有完全分离。
 这一对比是后面“木卫四作为探针”的伏笔。
+
+---
+class: inverse, withfig
+background-image: url(images/anderson2001_fig1_twolayer.png), url(images/bg_nagoya_dark.jpg)
+background-size: 56% auto, cover
+background-position: right 2% top 105px, center
+
+## 转动惯量偏大
+
+- Galileo 多次近飞多普勒给出重力四极矩 `\(C_{22}\)`
+- 流体静力假设 + Radau → `\(C/MR^2=0.3549\pm0.0042\)`（Anderson et al. 2001）
+- 对照：均一 ~0.40；未分异（含冰相变）~0.38；木卫三 ~0.31
+- 偏大意味着**不完全分异**（冰–岩混合可深达内部；见右图两层模型族）
+- 指向吸积偏慢、CPD 晚期偏冷；天问四号可再测重力与潮汐
+
+.footnote[Anderson et al. 2001, Icarus；McKinnon 1997；Schubert et al. 2004；Gao &amp;amp; Stevenson 2013]
+
+???
+Galileo 赤道飞掠给出 C22，在静力平衡下推出 MOI。
+右图取自 Anderson et al. 2001 Fig.1：满足质量与转动惯量的两层模型族；粗实/虚线对应名义与 ±1σ 的 C22，细线为外壳厚度（km）。
+与木卫三不同，不能建成完全冰壳+岩铁核模型，故为部分分异；这约束 CPD 晚期要冷、吸积要慢。
+感应磁场暗示有地下海洋，与外层有冰/液态水、深处仍混合并不矛盾。
 
 ---
 class: inverse, middle
@@ -159,15 +179,15 @@ class: inverse, middle
 
 &lt;br&gt;
 
-.large[.hl[思路]：把木星内部、CPD 与卫星放进同一条形成时间线]
+.large[把木星内部、CPD 与卫星放在同一条形成时间线上]
 
 .readable.short[
-形成端理论 `\(\Rightarrow\)` 木卫四分异 / 冰–岩比 / 地下海洋的可检验预言，支撑国家重点研发项目对**木卫四内部结构**的认识，服务**天问四号**
+由形成端给出木卫四分异、冰–岩比与地下海洋的约束
 ]
 
 ???
 三个问题对应报告的三个部分。强调“同一条时间线”：撞击的时刻决定 CPD 的初始条件，CPD 又决定卫星的吸积环境。
-口头点明：本研究在国家重点研发项目中的角色是形成端的初始条件与内部结构预言，与空间环境、探测原理方向互补。
+口头点明：形成端给出初始条件与内部结构先验，供天问四号重力与潮汐测量对照。
 
 ---
 class: inverse, middle, section-slide
@@ -189,11 +209,29 @@ background-position: right 3% top 130px, center
 - 经典核吸积模型（core accretion）预言**致密核**
 - 稀释核需要**额外的混合机制**
 
-.footnote[图改编自 Wahl et al. (2017, GRL) 图 1；Militzer et al. (2022, PSJ)]
+.footnote[Wahl et al. 2017, GRL；Militzer et al. 2022, PSJ]
 
 ???
 要点：朱诺号测得的偶次重力矩与致密小核模型不符。
 对流侵蚀核的效率在木星条件下不足以在 4.5 Gyr 内形成如此延展的结构，因此需要早期的、能量很大的事件。
+
+---
+class: inverse, center, middle
+background-image: url(images/bg_nagoya_dark.jpg)
+background-size: cover
+
+## 早期大撞击模型
+
+&lt;div align="center" style="overflow: hidden; margin-top: -1%;"&gt;
+  &lt;video id="gi-impact-video" loop muted playsinline preload="metadata" width="720" height="540" style="max-height: 480px; margin-top: -4%; margin-bottom: -2%;"&gt;
+    &lt;source src="images/Jupiter_10Earth.mp4" type="video/mp4"&gt;
+  &lt;/video&gt;
+&lt;/div&gt;
+
+.footnote[Liu et al. 2019, Nature]
+
+???
+撞击动画（Liu et al. 2019）。进入本页才开始播放；下一页为快照与要点（无视频）。
 
 ---
 class: inverse
@@ -213,16 +251,69 @@ background-position: center top 130px, center
 &lt;div&gt;
 &lt;ul&gt;
 &lt;li&gt;稀释结构可&lt;b&gt;维持数十亿年&lt;/b&gt;&lt;/li&gt;
-&lt;li&gt;正面撞击在引力聚焦（gravitational focusing）下概率较高&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 ]
 
-.footnote[图改编自 Liu, S.-F., Hori, Y., Müller, S., et al. (2019, Nature, 572, 355) 图 1]
+.footnote[Liu et al. 2019, Nature]
 
 ???
-撞击能量足以把核物质搅入包层，之后形成的成分梯度抑制对流，使稀释结构长期稳定。
-年轻木星半径大、引力聚焦强，近正面撞击并非小概率事件。
+撞击能量足以把核物质搅入包层，之后形成的成分梯度抑制对流，使稀释结构长期稳定。发生率与碰撞角见下一页。
+
+---
+class: inverse, withfig
+background-image: url(images/bg_nagoya_dark.jpg)
+background-size: cover
+
+## 撞击发生的可能性
+
+- N 体：年轻木星附近胚胎丰富；数 Myr 内撞击概率**至少约 40%**
+- **引力聚焦**（gravitational focusing）：质量大、半径大 → 有效碰撞截面增大
+- 碰撞角：正面/近正面比擦边更常见；约一半 merger 的碰撞角 `\(\lesssim 30^\circ\)`
+- 打碎致密核并形成稀释核：需约 `\(10\,M_\oplus\)` 胚胎的**正面**撞击；擦边不足以充分混合
+
+&lt;!-- 右侧 2×2 用 CSS background-image 铺满标题下～脚注上的空区；标签叠在图角 --&gt;
+&lt;div class="p11-stage"&gt;
+  &lt;div class="p11-cell p11-c1" style="background-image:url(images/toy1.png)"&gt;&lt;span class="p11-lbl"&gt;0 yr&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="p11-cell p11-c2" style="background-image:url(images/toy2.png)"&gt;&lt;span class="p11-lbl"&gt;1 Myr&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+.footnote[N-body toy：REBOUND]
+
+--
+
+&lt;!-- 下一键：toy11 盖住左上，显示出木星图标 --&gt;
+&lt;div class="p11-stage p11-overlay"&gt;
+  &lt;div class="p11-cell p11-c1" style="background-image:url(images/toy11.png)"&gt;&lt;span class="p11-lbl"&gt;0 yr&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+--
+
+&lt;div class="p11-stage p11-bottom"&gt;
+  &lt;div class="p11-cell p11-c3" style="background-image:url(images/toy3.png)"&gt;&lt;span class="p11-lbl"&gt;20 kyr&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="p11-cell p11-c4" style="background-image:url(images/toy4.png)"&gt;&lt;span class="p11-lbl"&gt;50 kyr&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+???
+对齐 Jupiter_short：先出上排 toy1（0 yr，无木星图标）/ toy2（1 Myr）；`--` 用 toy11 盖住 toy1（出现木星图标）；再 `--` 出下排 toy3（20 kyr）/ toy4（50 kyr）；下一页换成碰撞角统计。
+
+---
+class: inverse, withfig
+background-image: url(images/liu2019_edfig2_collision_angles.png), url(images/bg_nagoya_dark.jpg)
+background-size: auto 68%, cover
+background-position: right 2% top 105px, center
+
+## 撞击发生的可能性
+
+- N 体：年轻木星附近胚胎丰富；数 Myr 内撞击概率**至少约 40%**
+- **引力聚焦**（gravitational focusing）：质量大、半径大 → 有效碰撞截面增大
+- 碰撞角：正面/近正面比擦边更常见；约一半 merger 的碰撞角 `\(\lesssim 30^\circ\)`
+- 打碎致密核并形成稀释核：需约 `\(10\,M_\oplus\)` 胚胎的**正面**撞击；擦边不足以充分混合
+
+.footnote[Liu et al. 2019, Nature]
+
+???
+本页以 2019 主结果为准。示意图已隐去，只保留碰撞角与发生率统计。
 
 ---
 class: inverse, middle, section-slide
@@ -233,11 +324,48 @@ background-size: cover
 
 ---
 class: inverse, withfig
+background-image: url(images/jupiter_mass_growth.png), url(images/bg_nagoya_dark.jpg)
+background-size: auto 52%, cover
+background-position: right 6% top 125px, center
+
+## 木星失控吸积
+
+- 失控气体吸积开始后：`\(M(t)=M_{\mathrm{J}}-(M_{\mathrm{J}}-M_{\mathrm{p}})e^{-t/t_{\mathrm{grow}}}\)`
+- `\(M_{\mathrm{p}}=10\,M_{\oplus}\)`, `\(M_{\mathrm{J}}\simeq 318\,M_{\oplus}\)`, `\(t_{\mathrm{grow}}=0.2\)` Myr（20 万年）
+- 约 `\(0.45\)` Myr 达到 `\(0.9\,M_{\mathrm{J}}\)`
+- 撞击发生在质量快速增长之后（见后页）
+
+.footnote[Liu et al. 2019, Nature]
+
+???
+木星质量按指数增长进入失控吸积；约半 Myr 达九成木星质量后，胚胎更易被激发并撞击（下一页）。
+
+---
+class: inverse
+background-image: url(images/schematic_formation_timeline_prior.png), url(images/bg_nagoya_dark.jpg)
+background-size: 72% auto, cover
+background-position: center top 115px, center
+
+## 先前的形成时序
+
+.figtop.below-schematic[
+- 失控气体吸积完成之后才发生大撞击
+- 随后形成环行星盘与卫星
+- 撞击时标取单一典型值
+]
+
+
+???
+旧图像：失控吸积 → 大撞击 → 环行星盘 → 卫星；撞击时刻用一个典型值代表。
+后面 N 体给出宽的撞击时间窗口。
+
+---
+class: inverse, withfig
 background-image: url(images/liu2019_nbody_embryo_outcomes.png), url(images/bg_nagoya_dark.jpg)
 background-size: auto 60%, cover
 background-position: right 8% top 130px, center
 
-## N 体模拟（N-body simulation）：撞击何时发生？
+## N 体模拟：撞击时刻
 
 撞击时间取决于：
 - 行星胚胎（planetary embryo）质量
@@ -246,9 +374,9 @@ background-position: right 8% top 130px, center
 
 `\(\Rightarrow\)` 存在一定的**时间窗口**
 
-.hl[共同点]：撞击时木星已完成**失控气体吸积**（runaway gas accretion）
+共同点是：撞击时木星已完成**失控气体吸积**（runaway gas accretion）
 
-.footnote[图改编自 Liu et al. (2019, Nature) 扩展数据图 1b 节选（k、t&lt;sub&gt;grow&lt;/sub&gt; 两组；Merge = 撞击木星）；&lt;br&gt;撞击时刻分布：刘尚飞等（待补充引用）]
+.footnote[Liu et al. 2019, Nature]
 
 ???
 木星质量快速增长时，Hill 半径扩大、共振位置移动，附近胚胎被激发到穿越轨道。
@@ -257,18 +385,17 @@ background-position: right 8% top 130px, center
 ---
 class: inverse, withfig
 background-image: url(images/nbody_jup_kscan_i0f1.png), url(images/bg_nagoya_dark.jpg)
-background-size: auto 58%, cover
-background-position: right 2% top 118px, center
+background-size: auto 65%, cover
+background-position: right 52px top 108px, center
 
-## 撞击时刻分布：共面模型的大弥散
+## 共面模型中的撞击时刻分布
 
 - 碰撞时间跨越约 `\(10^{3}\)`–`\(10^{6}\)` yr
 - 峰位随生长参数 `\(k\)` 系统性移动
 - 分布**宽度大**，并非集中于单一时标
 
-.hl[含义]：CPD 初始热状态与成分窗口本身具有显著不确定性
+因此 CPD 的初始热状态与成分窗口本身具有显著不确定性
 
-.footnote[木星受胚胎撞击的碰撞时间直方图（共面，`\(f=1\)`，`\(k=4\)`–`\(12\)`）；刘尚飞等（待补充引用）。各参数约千次随机实现。]
 
 ???
 共面扫描中，碰撞时刻从约 \(10^{3}\) 延展到 \(10^{6}\) 年量级；\(k\) 增大时峰位整体后移。
@@ -278,18 +405,17 @@ background-position: right 2% top 118px, center
 ---
 class: inverse, withfig
 background-image: url(images/nbody_jup_inc_k7f1.png), url(images/bg_nagoya_dark.jpg)
-background-size: auto 58%, cover
-background-position: right 2% top 118px, center
+background-size: auto 65%, cover
+background-position: right 52px top 108px, center
 
-## 倾角扫描：碰撞更稀、分布更宽
+## 倾角扫描中的撞击时刻分布
 
 - 倾角增大 → 碰撞次数显著下降
 - 尖峰变平缓，并向更晚时刻延伸
 - 非共面情形下，**弥散进一步放大**
 
-.hl[对 CPD]：能量与固体能否、何时注入，强烈依赖初始轨道倾角
+能量与固体能否、何时注入，强烈依赖初始轨道倾角
 
-.footnote[木星 `\(k=7\)`、`\(f=1\)` 倾角扫描的碰撞时间直方图；刘尚飞等（待补充引用）。各倾角约千次随机实现。]
 
 ???
 共面时分布相对尖锐；稍有倾角，碰撞变少、分布展宽并拖向 \(10^{6}\) yr。
@@ -299,22 +425,21 @@ background-position: right 2% top 118px, center
 ---
 class: inverse
 background-image: url(images/schematic_formation_timeline.png), url(images/bg_nagoya_dark.jpg)
-background-size: 82% auto, cover
-background-position: center top 128px, center
+background-size: 72% auto, cover
+background-position: center top 115px, center
 
 ## 撞击设定环行星盘的初始条件
 
 .figtop.below-schematic[
-- 撞击时 CPD **已经存在**
-- **能量注入**：抬高 CPD 初始温度
-- **物质再分配**：改变 CPD 的固体丰度与成分
+- 撞击落在失控吸积开始后的时间窗口（约 `\(10^{4}\)`–`\(10^{6}\)` yr）
+- 撞击时 CPD **已经存在**；能量与固体注入设定初始热状态与成分
 ]
 
-.footnote[示意图为本报告绘制；CPD 形成：Canup &amp;amp; Ward (2002, AJ)；Szulágyi et al. (2016, MNRAS)]
+.footnote[Canup &amp;amp; Ward 2002, AJ；Szulágyi et al. 2016, MNRAS]
 
 ???
-撞击不只是改造木星内部；释放的能量与抛射物会进入周围的 CPD。
-因此撞击时标 ⇒ CPD 初始热状态与固体丰度 ⇒ 卫星吸积环境。
+现认知用撞击时间窗口取代单一典型时标：失控吸积开始后约 \(10^{4}\)–\(10^{6}\) yr。
+撞击释放的能量与抛射物进入已存在的 CPD，设定初始热状态与固体丰度。
 
 ---
 class: inverse, middle
@@ -329,7 +454,7 @@ class: inverse, middle
 
 &lt;br&gt;
 
-.large[.red[**下一步**：CPD 的结构能否被观测约束？]]
+.large[.red[接下来：CPD 的结构能否被观测约束？]]
 
 ???
 用一句话过渡到 CPD 模型与 JWST。
@@ -343,9 +468,9 @@ background-size: cover
 
 ---
 class: inverse, withfig
-background-image: url(images/sun2024_cpd_density_temperature.png), url(images/bg_nagoya_dark.jpg)
-background-size: auto 60%, cover
-background-position: right 3% top 130px, center
+background-image: url(images/cpd_cartoon.jpg), url(images/bg_nagoya_dark.jpg)
+background-size: auto 70%, cover
+background-position: right 1% top 100px, center
 
 ## CPD 参数化模型 + 辐射转移
 
@@ -353,7 +478,7 @@ background-position: right 3% top 130px, center
 - 辐射转移（radiative transfer）计算 `\(\Rightarrow\)` 合成光谱能量分布（spectral energy distribution, SED）
 - 系统构建**不同演化阶段**的 CPD 结构
 
-.footnote[图改编自 Sun, Huang, Dong &amp;amp; Liu (2024, ApJ, 972, 25) 图 1（节选 Full / Evolved disk：尘埃密度与温度）]
+.footnote[Sun, Huang, Dong &amp;amp; Liu 2024, ApJ]
 
 ???
 参数化的好处：可以把撞击给出的初始条件、以及观测拟合给出的约束放进同一组参数。
@@ -362,19 +487,19 @@ background-position: right 3% top 130px, center
 ---
 class: inverse, withfig
 background-image: url(images/sun2026_cpd_sed_fitting.png), url(images/bg_nagoya_dark.jpg)
-background-size: auto 60%, cover
-background-position: right 3% top 130px, center
+background-size: auto 72%, cover
+background-position: right 1% top 100px, center
 
-## JWST：年轻巨行星周围的环行星盘
+## JWST 约束下的环行星盘
 
 - 对象：年轻系外巨行星与**行星质量天体**（planetary-mass objects）
-- 光谱拟合约束：
-  - 盘质量
-  - 径向结构
-  - 尘埃演化阶段
-  - 热条件
+- 光谱拟合约束：盘质量、径向结构、尘埃与热条件
+- 拟合示例：**GQ Lup B** — 所用参数：
+  - `\(\color{red}{R_{\mathrm{in}}=33\,R_{\mathrm{J}},\; R_{\mathrm{out}}&gt;55\,R_{\mathrm{J}},\; h_0/r_0=0.1}\)`
 
-.footnote[图改编自 Sun, Marleau &amp;amp; Liu (2026, A&amp;amp;A) 图 6；JWST CPD 观测示例：Luhman et al. (2023, ApJL)]
+&lt;img src="images/cpd_transitional_cartoon.png" width="210" style="display:block; margin:0.45em 0 0 0.15em; border-radius:3px;" alt="Transitional disk"/&gt;
+
+.footnote[Sun, Marleau &amp;amp; Liu 2026, A&amp;amp;A；Luhman et al. 2023, ApJL]
 
 ???
 这些系统处在木星系形成时相近的阶段，是“正在进行的木星系”。
@@ -396,23 +521,23 @@ background-position: right 3% top 165px, center
 ## 为什么是木卫四？
 
 - 位于最外侧，**热演化最弱**
-- 仅部分分异，保留吸积时的信息
+- 转动惯量偏大 → **不完全分异**，保留吸积时的信息
 - 吸积需足够慢、温度足够低
-- 项目明确目标之一：深入认识**木卫四内部结构**（服务天问四号）
+- 天问四号科学目标之一：弄清**木卫四内部结构**
 
-`\(\Rightarrow\)` 对 CPD **晚期**吸积条件最敏感；形成理论可给出与探测直接对接的结构预言
+因此对 CPD **晚期**吸积条件最敏感
 
-.footnote[Anderson et al. (2001, Icarus)；Canup &amp;amp; Ward (2002, AJ)；Barr &amp;amp; Canup (2008, Icarus)；图：NASA/JPL PIA01082；项目：国家重点研发计划「木星空间环境的科学研究及探测原理」]
+.footnote[Anderson et al. 2001, Icarus；Canup &amp;amp; Ward 2002, AJ；Barr &amp;amp; Canup 2008, Icarus；NASA/JPL PIA01082]
 
 ???
-如果吸积太快或 CPD 太热，木卫四会被加热到完全分异，与 C/MR² ≈ 0.355 矛盾。
-因此木卫四的部分分异本身就是对 CPD 晚期温度与吸积时标的约束。
-点题：项目要把木卫四内部结构摸清；我们从形成端给出分异程度、冰–岩比、海洋存在与否的先验，供重力/潮汐反演对照。
+如果吸积太快或 CPD 太热，木卫四会被加热到完全分异，与前面讲的 C/MR² ≈ 0.355 矛盾。
+部分分异本身就是对 CPD 晚期温度与吸积时标的约束。
+形成端给出分异程度、冰–岩比、海洋存在与否的先验，供天问四号重力/潮汐反演对照。
 
 ---
 class: inverse
 
-## 不同撞击时标 `\(\Rightarrow\)` 可区分的预言
+## 撞击早晚与木卫四的预言
 
 &lt;table class="cmp c3 big"&gt;
 &lt;thead&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th&gt;撞击较早&lt;/th&gt;&lt;th&gt;撞击较晚&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
@@ -421,19 +546,17 @@ class: inverse
 &lt;tr&gt;&lt;td&gt;固体丰度&lt;/td&gt;&lt;td class="tbd"&gt;待模型给出&lt;/td&gt;&lt;td class="tbd"&gt;待模型给出&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;木卫四分异程度&lt;/td&gt;&lt;td&gt;较弱&lt;/td&gt;&lt;td&gt;较强&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;冰–岩比&lt;/td&gt;&lt;td&gt;较高&lt;/td&gt;&lt;td&gt;较低&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;地下海洋&lt;/td&gt;&lt;td&gt;更易保留 / 层更厚（示意）&lt;/td&gt;&lt;td&gt;更易变薄或消失（示意）&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;地下海洋&lt;/td&gt;&lt;td&gt;更易保留 / 层更厚&lt;/td&gt;&lt;td&gt;更易变薄或消失&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;
 
 .readable.short[
-天问四号可测：重力场（`\(C/MR^2\)`、密度分层）与潮汐响应（Love 数 `\(k_2\)` 等）——与上表预言直接对照
+天问四号可测重力场（`\(C/MR^2\)`、密度分层）与潮汐响应（Love 数 `\(k_2\)` 等），与上表对照
 ]
 
-.footnote[表中趋势为示意，需以模型计算结果替换；潮汐/重力反演见任务科学目标]
 
 ???
-注意：此表的具体方向需要用自己的模型结果核对后再填，示意用于口头讲解“为什么可区分”。
-核心逻辑：撞击时标 → CPD 热状态与固体丰度 → 木卫四的三项可观测量。
-对接天问四号：重力场约束整体分异与冰岩分层；潮汐 Love 数对液体层（地下海洋）敏感——形成模型给出先验区间，降低反演简并。
+撞击时标 → CPD 热状态与固体丰度 → 木卫四的可观测量。
+天问四号：重力场约束分异与冰岩分层；潮汐 Love 数对液体层敏感。
 
 ---
 class: inverse, withfig
@@ -441,61 +564,38 @@ background-image: url(images/mission_timeline_jupiter_system.png), url(images/bg
 background-size: auto 60%, cover
 background-position: right 3% top 130px, center
 
-## 天问四号：直接检验
+## 天问四号
 
-- **天问四号**：木星系探测，木卫四为重点目标之一；服务国家重点研发计划（汪毓明教授牵头）
-- 协同：**JUICE**、**Europa Clipper**
-- 可测量（与形成预言对应）：
-  - **重力场** `\(\Rightarrow\)` 转动惯量、密度分层与分异程度
-  - **潮汐**（Love 数 `\(k_2\)`）`\(\Rightarrow\)` 内部流变与液体层
-  - 磁感应 / 表面成分 `\(\Rightarrow\)` 地下海洋、冰–岩比
+- 木星系探测，木卫四为重点目标之一；服务其科学目标
+- 与 **JUICE**、**Europa Clipper** 协同
+- 可测：
+  - 重力场 → 转动惯量、密度分层与分异程度
+  - 潮汐（Love 数 `\(k_2\)`）→ 内部流变与液体层
+  - 磁感应 / 表面成分 → 地下海洋、冰–岩比
 
-.footnote[ESA Juice；NASA (2024-10-14)；国家航天局 (2024-06-28)；项目：「木星空间环境的科学研究及探测原理」]
 
 ???
-把理论预言转换成具体可测量量：重力 → C/MR² 与分层；潮汐 k₂ → 液体层/流变；磁感应 → 导电海洋；光谱 → 冰岩。
-强调：不同撞击时标给出不同的分异—海洋先验，帮助解释天问四号的重力场与潮汐测量、降低反演简并。
+把形成约束落到可测量量：重力 → C/MR² 与分层；潮汐 k₂ → 液体层/流变；磁感应 → 导电海洋；光谱 → 冰岩。
+不同撞击时标给出不同的分异—海洋先验，帮助解释天问四号的重力场与潮汐测量、降低反演简并。
 
 ---
 class: inverse
 
-# 总结与展望
+# 总结
 
 .medium-text[
 - 木星系记录了 **PPD → CPD 过渡**时的物质分配与动力学
-- 早期大撞击解释**稀释核**，撞击时木星已完成失控气体吸积
-- 撞击为 CPD 设定**初始热状态与成分**
-- CPD 模型 + JWST 光谱：约束盘质量、结构、尘埃与热条件
-- **木卫四**：检验 CPD 晚期吸积条件的关键对象
-- **天问四号**等任务：把形成预言转化为可检验的重力场 / 潮汐测量
+- 早期大撞击可解释**稀释核**；撞击发生在失控气体吸积之后
+- 撞击设定 CPD 的初始热状态与成分
+- CPD 模型结合 JWST 光谱，约束盘质量、结构、尘埃与热条件
+- 木卫四对 CPD 晚期吸积条件最敏感
+- 天问四号等任务可用重力场与潮汐测量检验形成预言
 ]
 
 .footer[✉ liushangfei@mail.sysu.edu.cn]
 
 ???
-收尾：内部结构、环行星盘、卫星三者在同一时间线上相互约束；探测器数据将把理论预言变为检验。
-下一页专门点明对国家重点研发项目的形成端贡献。
-
----
-class: inverse
-
-## 对国家重点研发项目的贡献
-
-.readable[
-- 项目：「木星空间环境的科学研究及探测原理」（汪毓明教授牵头）
-- **明确目标之一**：深入认识**木卫四内部结构**，服务**天问四号**
-- **本研究的位置**：提供形成端的**理论框架**与 **CPD / 吸积初始条件约束**
-  - 撞击时标 `\(\Rightarrow\)` 木卫四分异程度、冰–岩比、地下海洋预言
-  - 与天问四号**重力场、潮汐**测量对接，降低内部结构反演简并
-- **互补性**：与项目中已有的**空间环境**、**探测原理 / 技术**方向并行——形成理论给出“测什么、怎么解”
-]
-
-.footnote[项目目标表述据任务与课题定位整理；具体技术指标以正式任务文件为准]
-
-.footer[✉ liushangfei@mail.sysu.edu.cn]
-
-???
-一分钟讲清角色：我们不做探测载荷本身，而是给出木卫四应长成什么样的形成端先验；空间环境与探测技术方向负责测得准、解得开——三者互补。
+收尾：内部结构、环行星盘、卫星三者在同一时间线上相互约束；天问四号等任务可用重力与潮汐把形成约束落到数据上。
 
 ---
 class: inverse
@@ -503,11 +603,10 @@ class: inverse
 ## 参考文献
 
 &lt;div class="reflines full"&gt;
-&lt;p&gt;&lt;b&gt;木星内部与大撞击：&lt;/b&gt;Wahl et al. 2017, GRL · Militzer et al. 2022, PSJ · Liu, S.-F., Hori, Y., Müller, S., et al. 2019, Nature, 572, 355 · 刘尚飞等（待补充引用）&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;木星内部与大撞击：&lt;/b&gt;Wahl et al. 2017, GRL · Militzer et al. 2022, PSJ · Liu, S.-F., Hori, Y., Müller, S., et al. 2019, Nature, 572, 355&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;伽利略卫星与木卫四：&lt;/b&gt;Anderson et al. 2001, Icarus · Schubert et al. 2004, in &lt;i&gt;Jupiter&lt;/i&gt;, CUP · Barr &amp;amp; Canup 2008, Icarus&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;环行星盘：&lt;/b&gt;Canup &amp;amp; Ward 2002, AJ · Szulágyi et al. 2016, MNRAS · Sun, Huang, Dong &amp;amp; Liu 2024, ApJ, 972, 25 · Sun, Marleau &amp;amp; Liu 2026, A&amp;amp;A · Luhman et al. 2023, ApJL&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;探测任务：&lt;/b&gt;ESA Juice 任务页 · NASA 新闻稿 (2024-10-14) · 国家航天局 (2024-06-28)&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;项目：&lt;/b&gt;国家重点研发计划「木星空间环境的科学研究及探测原理」（汪毓明教授牵头）&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;图片：&lt;/b&gt;NASA/JPL PIA01082 · 首页及各页背景：Illustration: Nagoya University&lt;/p&gt;
 &lt;/div&gt;
 
@@ -625,6 +724,48 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
+<script type="text/javascript">
+(function () {
+  var slideElements;
+
+  function getElementForSlide(slide) {
+    slideElements = slideElements || document.querySelectorAll(".remark-slide");
+    return slideElements[slide.getSlideIndex()];
+  }
+
+  function pauseAllVideos() {
+    Array.from(document.querySelectorAll("video, audio")).forEach(function (vid) {
+      try { vid.pause(); } catch (e) {}
+      try { vid.currentTime = 0; } catch (e) {}
+    });
+  }
+
+  // Ensure nothing plays from residual autoplay / preload before first navigation.
+  pauseAllVideos();
+
+  slideshow.on("showSlide", function (slide) {
+    var el = getElementForSlide(slide);
+    if (!el) return;
+    Array.from(el.querySelectorAll("video, audio")).forEach(function (vid) {
+      try {
+        vid.muted = true;
+        vid.currentTime = 0;
+        var p = vid.play();
+        if (p && typeof p.catch === "function") p.catch(function () {});
+      } catch (e) {}
+    });
+  });
+
+  slideshow.on("hideSlide", function (slide) {
+    var el = getElementForSlide(slide);
+    if (!el) return;
+    Array.from(el.querySelectorAll("video, audio")).forEach(function (vid) {
+      try { vid.pause(); } catch (e) {}
+      try { vid.currentTime = 0; } catch (e) {}
+    });
+  });
+})();
+</script>
 
 <script>
 slideshow._releaseMath = function(el) {

@@ -25,20 +25,52 @@
   background-repeat: no-repeat !important;
   background-color: black !important;
 }
-.title-slide::after { content: "Illustration: Nagoya University"; font-size: 12px; color: #bbb; text-shadow: 0 0 3px #000; }
+.title-slide::after {
+  content: "第一届巨行星系统论坛 安徽·合肥" !important;
+  position: absolute !important;
+  top: auto !important; /* override exoplanet_2026 top:8px right credit */
+  left: 0 !important; right: 0 !important;
+  bottom: 3.5% !important;
+  width: 100% !important;
+  text-align: center !important;
+  font-size: 22px !important;
+  line-height: 1.35 !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 8px #000, 0 1px 4px #000, 0 0 2px #000 !important;
+  background: transparent !important;
+  pointer-events: none;
+  z-index: 30;
+}
 .remark-slide-content.title-slide h1 { font-size: 2.05em; line-height: 1.3; margin-top: 18px; }
 .remark-slide-content.title-slide h2 { font-size: 1.25em; margin-bottom: 1.3em; }
 .remark-slide-content.title-slide h3 { font-size: 1.0em; margin: 0.35em 0; }
 .title-slide h3 a, .title-slide a { color: rgb(255, 110, 200) !important; }
 
-/* ---------- footnotes (short explanatory text + source) ---------- */
-.remark-slide-content .footnote {
-  position: absolute; bottom: 11.5%; left: 6%; width: 88%;
-  padding: 0; font-size: 56%; line-height: 1.35;
-  color: rgb(0, 150, 255); text-align: center;
+/* ---------- footnotes (paper citations; blue; fixed size; near bottom) ----------
+   Use absolute px font-size so .withfig {font-size:23px} cannot shrink them.
+   Sit just above xe-banner bottom strip (~3em ≈ 52px) to avoid covering figures. */
+.remark-slide-content .footnote,
+.remark-slide-content.withfig .footnote,
+.remark-slide-content .figtop .footnote {
+  position: absolute !important;
+  bottom: 36px !important; /* just above xe-banner text; clears figure bottoms */
+  left: 5% !important;
+  right: 5% !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 19px !important; /* fixed px; was 56% (~14px) / 17px first pass */
+  line-height: 1.3 !important;
+  color: rgb(0, 150, 255) !important;
+  text-align: center !important;
+  z-index: 25;
+  pointer-events: none;
 }
-.remark-slide-content .footnote.left { text-align: left; }
-.remark-slide-content .footnote .note { color: #c8c8c8; }
+.remark-slide-content .footnote.left { text-align: left !important; }
+.remark-slide-content .footnote .note {
+  color: #c8c8c8 !important;
+  font-size: inherit !important;
+}
 
 /* ---------- figure + text layouts ---------- */
 /* text column on the left, figure (slide background) on the right, inside
@@ -81,9 +113,49 @@ table.cmp td.tbd { color: #9a9a9a; }
 
 @page { size: 908px 511px; margin: 0; }
 
-.figtop.below-schematic { top: 400px; }
+.figtop.below-schematic { top: 470px; font-size: 88%; }
 
 /* ---------- textured backdrop on every slide (Nagoya University image, pre-darkened to 20%);
    figure slides layer their figure on top of it inline; section/thanks slides use the 32% version */
 .remark-slide-content { background-image: url(../images/bg_nagoya_dark.jpg); background-size: cover;
   background-position: center; background-repeat: no-repeat; background-color: black; }
+
+/* ---------- Page 11 N-body toy 2x2 ----------
+   Fill the right empty band between title (~90px) and footnote/banner (~550px).
+   Square toys (752²) use background-size:contain; labels overlay like Jupiter_short. */
+.p11-stage {
+  position: absolute;
+  right: 1%;
+  top: 84px;
+  width: 57.5%;
+  height: 475px;
+  pointer-events: none;
+  z-index: 5;
+}
+.p11-stage.p11-overlay { z-index: 6; }
+.p11-stage.p11-bottom { z-index: 5; }
+.p11-cell {
+  position: absolute;
+  width: 49.2%;
+  height: 49.2%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.p11-c1 { left: 0; top: 0; }
+.p11-c2 { right: 0; top: 0; }
+.p11-c3 { left: 0; bottom: 0; }
+.p11-c4 { right: 0; bottom: 0; }
+.p11-lbl {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-size: 14px;
+  line-height: 1.1;
+  color: #e8e8e8;
+  text-shadow: 0 0 5px #000, 0 1px 2px #000;
+  pointer-events: none;
+}
+@media print {
+  .p11-stage { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

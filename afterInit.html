@@ -1,0 +1,42 @@
+<script type="text/javascript">
+(function () {
+  var slideElements;
+
+  function getElementForSlide(slide) {
+    slideElements = slideElements || document.querySelectorAll(".remark-slide");
+    return slideElements[slide.getSlideIndex()];
+  }
+
+  function pauseAllVideos() {
+    Array.from(document.querySelectorAll("video, audio")).forEach(function (vid) {
+      try { vid.pause(); } catch (e) {}
+      try { vid.currentTime = 0; } catch (e) {}
+    });
+  }
+
+  // Ensure nothing plays from residual autoplay / preload before first navigation.
+  pauseAllVideos();
+
+  slideshow.on("showSlide", function (slide) {
+    var el = getElementForSlide(slide);
+    if (!el) return;
+    Array.from(el.querySelectorAll("video, audio")).forEach(function (vid) {
+      try {
+        vid.muted = true;
+        vid.currentTime = 0;
+        var p = vid.play();
+        if (p && typeof p.catch === "function") p.catch(function () {});
+      } catch (e) {}
+    });
+  });
+
+  slideshow.on("hideSlide", function (slide) {
+    var el = getElementForSlide(slide);
+    if (!el) return;
+    Array.from(el.querySelectorAll("video, audio")).forEach(function (vid) {
+      try { vid.pause(); } catch (e) {}
+      try { vid.currentTime = 0; } catch (e) {}
+    });
+  });
+})();
+</script>
